@@ -22,3 +22,4 @@ fi
 echo The CLI has been installed.
 LOCALDOTNET="$INSTALLDIR/dotnet"
 # Run the build process now. Implement your build script here.
+dotnet restore && dotnet publish -c Release -o bin .
