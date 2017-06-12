@@ -1,9 +1,4 @@
-FROM mhart/alpine-node
-EXPOSE 80
-
-WORKDIR /app
-COPY package.json .
+FROM node:6-onbuild
+EXPOSE 8080
 RUN npm install
-COPY . .
-
-CMD ["node", "server.js"]
+CMD ["npm", "start"]
